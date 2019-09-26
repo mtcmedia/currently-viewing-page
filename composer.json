@@ -1,0 +1,52 @@
+{
+    "name": "mtcmedia/currently-viewing-page",
+    "description": "Widget for watching who else is viewing this page",
+    "keywords": [
+        "mtcmedia",
+        "currently viewing",
+        "view stats"
+    ],
+    "type": "library",
+    "authors": [
+        {
+            "name": "Martins Fridenbergs",
+            "email": "martins.fridenbergs@mtcmedia.co.uk"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.7.*|5.8.*|6.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.7.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mtc\\CurrentlyViewing\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mtc\\CurrentlyViewing\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mtc\\CurrentlyViewing\\Providers\\CurrentlyViewingServiceProvider"
+            ],
+            "aliases": {
+                "currently_viewing": "Barryvdh\\Debugbar\\Facade"
+            }
+        }
+    }
+}
