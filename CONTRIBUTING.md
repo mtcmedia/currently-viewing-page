@@ -11,4 +11,5 @@ Recommended contributions:
 * UI customisation options
 
 ##Authors
+
 Martins Fridenbergs 
